@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: 'Home' }">Home</router-link>|
-      <router-link :to="{ name: 'Home2' }">Home2</router-link>|
-      <router-link :to="{ name: 'About' }">About</router-link>|
-      <router-link :to="{ name: 'User', params: { username: 'Vue' } }"
-        >User</router-link
-      >| <router-link :to="{ name: 'List' }">List</router-link>|
-      <router-link :to="{ name: 'Create' }">Create</router-link>
-    </div>
+    <navBar />
     <router-view />
   </div>
 </template>
+<script>
+import navBar from '@/components/NavBar'
+export default {
+  components: {
+    navBar
+  }
+}
+</script>
 <style>
 html {
   -webkit-text-size-adjust: 100%;
