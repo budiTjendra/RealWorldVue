@@ -1,13 +1,12 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="nav">
     <router-link to="/" class="brand">Real World Events</router-link>
     <nav>
       <router-link :to="{ name: 'Home' }">Home</router-link>|
       <router-link :to="{ name: 'Home2' }">Home2</router-link>|
       <router-link :to="{ name: 'About' }">About</router-link>|
-      <router-link :to="{ name: 'User', params: { username: 'Vue' } }"
-        >User</router-link
-      >| <router-link :to="{ name: 'List' }">List</router-link>|
+      <router-link :to="{ name: 'User', params: { username: 'Vue' } }">User</router-link>|
+      <router-link :to="{ name: 'List' }">List</router-link>|
       <router-link :to="{ name: 'Create' }">Create</router-link>
     </nav>
   </div>
