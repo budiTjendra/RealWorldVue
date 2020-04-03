@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import User from '../views/User'
+import Create from '../views/Create'
+import List from '../views/List'
+import Show from '../views/Show'
 
 Vue.use(VueRouter)
 
@@ -31,6 +34,26 @@ const routes = [
     name: 'User',
     component: User,
     props: true
+  },
+  {
+    path: '/list',
+    name: 'List',
+    component: List
+  },
+  {
+    path: '/show',
+    name: 'Show',
+    component: Show
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
+  },
+  {
+    path: '/create',
+    name: 'Create',
+    component: Create
   }
 ]
 
