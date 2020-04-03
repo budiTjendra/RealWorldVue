@@ -11,7 +11,9 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  computed: mapState(['user', 'categories'])
+  computed: {
+    ...mapState(['user', 'categories'])
+  }
 }
 </script>
 
