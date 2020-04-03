@@ -5,6 +5,7 @@
     <ul>
       <li v-for="category in categories" :key="category">{{ category }}</li>
     </ul>
+    <p>There are {{ $store.getters.catLength }} categories</p>
   </div>
 </template>
 
