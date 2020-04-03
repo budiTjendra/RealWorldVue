@@ -8,7 +8,7 @@
 
 <script>
 import EventCard from '@/components/EventCard'
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
 export default {
   components: {
     EventCard
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     async loadData() {
-      const resp = await axios.get('http://localhost:3000/events')
+      const resp = await EventService.getEvents()
       this.events = resp.data
       console.log('loadData', this.events)
     }
