@@ -25,7 +25,6 @@ export default {
     async loadData() {
       const resp = await EventService.getEvents()
       this.events = resp.data
-      console.log('loadData', this.events)
     }
   }
 }

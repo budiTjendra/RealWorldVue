@@ -19,12 +19,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-  beforeCreate() {
-    console.log('beforeCreate', this.event)
-  },
-  created() {
-    console.log('created', this.event)
   }
 }
 </script>

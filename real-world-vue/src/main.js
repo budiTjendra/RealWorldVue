@@ -17,7 +17,7 @@ const requireComponent = require.context(
 requireComponent.keys().forEach(fileName => {
   // Get component config
   const componentConfig = requireComponent(fileName)
-  console.log({ fileName })
+
   // Get PascalCase name of component
   const componentName = upperFirst(
     camelCase(
@@ -39,7 +39,6 @@ requireComponent.keys().forEach(fileName => {
   )
 })
 
-console.log(requireComponent.keys())
 Vue.config.productionTip = false
 
 new Vue({
