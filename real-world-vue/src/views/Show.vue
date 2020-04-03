@@ -1,5 +1,11 @@
 <template>
-  <h1>This is show page with id={{ id }}</h1>
+  <div>
+    <h1>
+      Showing Event
+      <br />
+      #{{ id }}
+    </h1>
+  </div>
 </template>
 
 <script>
