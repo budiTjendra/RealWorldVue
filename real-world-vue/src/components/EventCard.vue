@@ -1,5 +1,8 @@
 <template>
-  <router-link class="event-link" :to="{ name: 'Show', params: { id: 1 } }">
+  <router-link
+    class="event-link"
+    :to="{ name: 'Show', params: { id: event.id } }"
+  >
     <div class="event-card -shadow">
       <span class="eyebrow">{{ event.date }} on {{ event.time }}</span>
       <h4 class="title">{{ event.title }}</h4>
@@ -11,19 +14,17 @@
 <script>
 import BaseIcon from '@/components/BaseIcon.vue'
 export default {
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: 'Beach Cleanup',
-        date: 'Tues Aug 19',
-        time: '16:00',
-        attendees: [
-          { id: 'A1', name: 'Budi' },
-          { id: 'A2', name: 'Maria' }
-        ]
-      }
+  props: {
+    event: {
+      type: Object,
+      required: true
     }
+  },
+  beforeCreate() {
+    console.log('beforeCreate', this.event)
+  },
+  created() {
+    console.log('created', this.event)
   }
 }
 </script>
