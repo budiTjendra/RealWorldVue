@@ -20,7 +20,8 @@ export default new Vuex.Store({
       { id: 2, text: '...', done: false },
       { id: 3, text: '...', done: true },
       { id: 4, text: '...', done: false }
-    ]
+    ],
+    events: [{ id: 1 }, { id: 2 }]
   },
   mutations: {},
   actions: {},
@@ -34,6 +35,9 @@ export default new Vuex.Store({
     },
     activeTodosCount: (state, getters) => {
       return state.todo.length - getters.doneTodos.length
+    },
+    getEventById: state => id => {
+      return state.events.find(event => event.id === id)
     }
   }
 })

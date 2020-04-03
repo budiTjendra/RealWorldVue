@@ -6,6 +6,7 @@
       <li v-for="category in categories" :key="category">{{ category }}</li>
     </ul>
     <p>There are {{ $store.getters.catLength }} categories</p>
+    <p>{{ getEvent(1) }}</p>
   </div>
 </template>
 
@@ -13,6 +14,9 @@
 import { mapState } from 'vuex'
 export default {
   computed: {
+    getEvent() {
+      return this.$store.getters.getEventById
+    },
     ...mapState(['user', 'categories'])
   }
 }
