@@ -41,9 +41,10 @@ const routes = [
     component: List
   },
   {
-    path: '/show',
+    path: '/show/:id',
     name: 'Show',
-    component: Show
+    component: Show,
+    props: true
   },
   {
     path: '/user',

@@ -1,9 +1,11 @@
 <template>
-  <h1>This is show page</h1>
+  <h1>This is show page with id={{ id }}</h1>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['id']
+}
 </script>
 
 <style></style>
