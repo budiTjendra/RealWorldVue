@@ -29,7 +29,8 @@ const routes = [
   {
     path: '/user/:username',
     name: 'User',
-    component: User
+    component: User,
+    props: true
   }
 ]
 

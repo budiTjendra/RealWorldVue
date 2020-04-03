@@ -1,9 +1,11 @@
 <template>
-  <h1>This is {{ $route.params.username }} page</h1>
+  <h1>This is {{ username }} page</h1>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['username']
+}
 </script>
 
 <style></style>
