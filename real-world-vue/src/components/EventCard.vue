@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'Show', params: { id: 1 } }">
+  <router-link class="event-link" :to="{ name: 'Show', params: { id: 1 } }">
     <div class="event-card -shadow">
       <span class="eyebrow">{{ event.date }} on {{ event.time }}</span>
       <h4 class="title">{{ event.title }}</h4>
