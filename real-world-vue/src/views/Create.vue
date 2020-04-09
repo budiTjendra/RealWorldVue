@@ -67,7 +67,9 @@ export default {
   },
   methods: {
     createEvent() {
-      this.$store.dispatch('createEvent', this.event)
+      this.$store.dispatch('createEvent', this.event).then(() => {
+        this.event = this.createFreshEvent()
+      })
     },
     createFreshEvent() {
       const user = this.$store.state.user
