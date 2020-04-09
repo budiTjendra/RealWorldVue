@@ -1,4 +1,4 @@
-    <template>
+<template>
   <div>
     <div class="event-header">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
@@ -14,7 +14,10 @@
     <p>{{ event.description }}</p>
     <h2>
       Attendees
-      <span class="badge -fill-gradient">{{ event.attendees.length }}</span>
+      <span
+        class="badge -fill-gradient"
+        v-if="event.attendees"
+      >{{ event.attendees.length }}</span>
     </h2>
     <ul class="list-group">
       <li v-for="(attendee, index) in event.attendees" :key="index" class="list-item">
@@ -23,7 +26,6 @@
     </ul>
   </div>
 </template>
-    
 
 <script>
 import EventService from '@/services/EventService.js'
